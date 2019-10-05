@@ -23,7 +23,8 @@ $(document).ready(function () {
             var imageUrl = results[i].images.fixed_height.url;
             var stillUrl = results[i].images.fixed_height_still.url;
             var gifLoad = $("<img>");
-            var rating = $("<p>")
+            var rating = $("<p>");
+            var gifDiv = $("<div>");
             
             gifLoad.attr("src", stillUrl);
             gifLoad.attr("data-still", stillUrl);
@@ -32,9 +33,9 @@ $(document).ready(function () {
             gifLoad.attr("class", "gif");
             rating.attr("class", "rating");
             rating.text("Rating: " + results[i].rating);
-            $("#gif-view").prepend(gifLoad); 
-            $("#gif-view").prepend(rating); 
-
+            gifDiv.prepend(rating);
+            gifDiv.append(gifLoad);
+            $("#gif-view").prepend(gifDiv);
         };
     });
 };

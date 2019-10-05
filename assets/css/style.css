@@ -27,6 +27,7 @@ h1 {
     color: white;
     background-color: brown;
     border-color: black;
+    margin-top: 5px;
 }
 
 #gif-form {
@@ -36,6 +37,7 @@ h1 {
 
 .rating {
     margin-left: 1em;
+    text-align: center;
 }
 
 
