@@ -2,8 +2,8 @@ $(document).ready(function () {
 
     var topics = ["The Office", "Parks and Recreation", "American Horror Story", "Shameless"];
 
-    $("#buttons-view").on("click", getGifInfo);
-    $(".gif").on("click", playPause);
+    $("#buttons-view").on("click", ".gif-button", getGifInfo);
+    $("#gif-view").on("click", ".gif", playPause);
 
     function getGifInfo() {
         var gif = $(this).attr("data-name");
