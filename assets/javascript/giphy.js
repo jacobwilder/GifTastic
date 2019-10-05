@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var topics = ["The Office", "Parks and Recreation", "American Horror Story", "Shameless"];
+    var topics = ["The Office", "Parks and Recreation", "American Horror Story", "Shameless", "Mr. Robot"];
 
     $("#buttons-view").on("click", ".gif-button", getGifInfo);
     $("#gif-view").on("click", ".gif", playPause);
@@ -23,13 +23,17 @@ $(document).ready(function () {
             var imageUrl = results[i].images.fixed_height.url;
             var stillUrl = results[i].images.fixed_height_still.url;
             var gifLoad = $("<img>");
+            var rating = $("<p>")
             
             gifLoad.attr("src", stillUrl);
             gifLoad.attr("data-still", stillUrl);
             gifLoad.attr("data-animate", imageUrl);
             gifLoad.attr("data-state", "still");
             gifLoad.attr("class", "gif");
-            $("#gif-view").prepend(gifLoad);  
+            rating.attr("class", "rating");
+            rating.text("Rating: " + results[i].rating);
+            $("#gif-view").prepend(gifLoad); 
+            $("#gif-view").prepend(rating); 
 
         };
     });

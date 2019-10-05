@@ -1,0 +1,44 @@
+h1 {
+    text-align: right;
+}
+
+#container {
+    text-align: left;
+    margin: 1em 1em auto auto;
+}
+
+#buttons-view {
+    margin: auto 1em 1em 1em;
+}
+
+.gif-button {
+    margin: 5px 5px 5px 5px;
+    color: white;
+    background-color: brown;
+    border-color: black;
+}
+
+#add-gif {
+    color: white;
+    background-color: brown;
+    border-color: black;
+}
+
+#gif-form {
+    margin: 5px auto auto auto;
+    text-align: right;   
+}
+
+.rating {
+    margin-left: 1em;
+}
+
+
+.gif {
+    margin: auto auto 1em 1em;
+}
+
+#gif-view {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
