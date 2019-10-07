@@ -57,6 +57,7 @@ $(document).ready(function () {
         var gifSearch = $("#search-input").val().trim();
         topics.push(gifSearch);
         renderButtons();
+        $("#search-input").val("");
     });
 
     function playPause(){
